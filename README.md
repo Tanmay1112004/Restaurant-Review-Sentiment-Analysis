@@ -1,91 +1,262 @@
-# 🍴 Restaurant Review Sentiment Analysis
+# 🍴 Restaurant Review Sentiment Analysis — End-to-End NLP Pipeline
 
-An end-to-end **Natural Language Processing (NLP)** pipeline designed to classify restaurant reviews into **Positive** or **Negative** sentiments. This project benchmarks various traditional and boosting algorithms to find the most effective classifier for short-form text data.
+<p align="center">
+  <b>Transform unstructured customer feedback into actionable business insights</b><br>
+  Built using classical NLP + machine learning with strong evaluation and benchmarking
+</p>
 
-## 🌟 Key Features
-
-* **Advanced Text Preprocessing**: Robust cleaning pipeline including regex-based noise reduction, stopword removal, and Porter Stemming.
-* **Vectorization Techniques**: Support for both **Bag-of-Words (CountVectorizer)** and **TF-IDF** to transform text into numerical features.
-* **Comprehensive Model Zoo**: Implementation of 9+ classifiers ranging from Naive Bayes to Gradient Boosting.
-* **In-depth Evaluation**: Automated generation of Confusion Matrices, ROC-AUC curves, and classification reports.
-* **Cross-Validation**: Built-in K-fold cross-validation to ensure model reliability and prevent overfitting.
-
----
-
-## 🏗️ The Pipeline
-
-The project follows a standard data science lifecycle:
-
-1. **Data Loading**: Parsing `.tsv` files for tab-separated review data.
-2. **Preprocessing**: Lowercasing, removing non-alphabetic characters, and stemming.
-3. **Feature Engineering**: Transforming tokens into feature vectors.
-4. **Training**: Fitting multiple models to the training set.
-5. **Benchmarking**: Comparing models based on the  and Accuracy.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.12-blue?style=flat-square"/>
+  <img src="https://img.shields.io/badge/NLP-Text%20Processing-green?style=flat-square"/>
+  <img src="https://img.shields.io/badge/ML-Model%20Benchmarking-orange?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Focus-Sentiment%20Analysis-red?style=flat-square"/>
+</p>
 
 ---
 
-## 🧪 Model Performance Matrix
+## 💡 What This Project Does
 
-| Algorithm | Accuracy | Precision | Recall | F1-Score |
-| --- | --- | --- | --- | --- |
-| **XGBoost** | 0.82 | 0.81 | 0.83 | 0.82 |
-| **Random Forest** | 0.79 | 0.77 | 0.80 | 0.78 |
-| **Naive Bayes** | 0.73 | 0.68 | 0.88 | 0.77 |
-| **Logistic Regression** | 0.76 | 0.75 | 0.76 | 0.75 |
+This system classifies restaurant reviews into:
+
+* 😊 **Positive Sentiment**
+* 😞 **Negative Sentiment**
+
+👉 Converting raw text into **decision-ready insights for businesses**
 
 ---
 
-## 🛠️ Installation & Setup
+## 🚨 Business Problem
 
-### 1. Clone the Repository
+Businesses receive thousands of reviews, but:
 
-```bash
+* Manual analysis is not scalable
+* Key insights are hidden in unstructured text
+* Negative feedback often goes unnoticed
+
+👉 Result: Missed opportunities for improvement
+
+---
+
+## 🎯 Solution
+
+A scalable **NLP pipeline** that:
+
+✅ Cleans and preprocesses raw text
+✅ Converts text into meaningful numerical features
+✅ Benchmarks multiple ML models
+✅ Identifies the best-performing classifier
+✅ Provides reliable sentiment predictions
+
+---
+
+## ⚡ Key Features
+
+### 🧹 Advanced Text Preprocessing
+
+* Regex-based cleaning
+* Stopword removal
+* Porter Stemming
+* Normalization
+
+---
+
+### 🔤 Dual Vectorization Strategy
+
+* Bag-of-Words (CountVectorizer)
+* TF-IDF
+
+👉 Enables comparison of feature representations
+
+---
+
+### 🧠 Multi-Model Benchmarking
+
+Includes 9+ algorithms:
+
+* Logistic Regression
+* Naive Bayes
+* Support Vector Machine
+* KNN
+* Decision Tree
+* Random Forest
+* Gradient Boosting
+* XGBoost
+* LightGBM
+
+---
+
+### 📊 Robust Evaluation Framework
+
+* Accuracy
+* Precision
+* Recall
+* F1-score
+* ROC-AUC
+* Confusion Matrix
+
+---
+
+### 🔁 Cross-Validation
+
+* K-Fold validation
+* Reduces overfitting
+* Ensures model reliability
+
+---
+
+## 🧬 NLP Pipeline Architecture
+
+```id="nlpflow1"
+Raw Reviews
+   │
+   ▼
+Text Cleaning & Normalization
+   │
+   ▼
+Tokenization & Stemming
+   │
+   ▼
+Feature Extraction (BoW / TF-IDF)
+   │
+   ▼
+Model Training (Multiple Algorithms)
+   │
+   ▼
+Evaluation & Benchmarking
+   │
+   ▼
+Best Model Selection
+```
+
+---
+
+## 📊 Model Performance Summary
+
+| Model               | Accuracy | Precision | Recall | F1 Score |
+| ------------------- | -------- | --------- | ------ | -------- |
+| **XGBoost**         | 0.82     | 0.81      | 0.83   | 0.82     |
+| Random Forest       | 0.79     | 0.77      | 0.80   | 0.78     |
+| Logistic Regression | 0.76     | 0.75      | 0.76   | 0.75     |
+| Naive Bayes         | 0.73     | 0.68      | 0.88   | 0.77     |
+
+👉 Insight: Boosting methods outperform traditional models on short-text data
+
+---
+
+## 🧠 Why This Project Stands Out (Recruiter POV)
+
+Most NLP projects:
+👉 Train one model and stop
+
+This project:
+
+✅ Benchmarks **multiple algorithms**
+✅ Compares **feature engineering strategies**
+✅ Uses **robust evaluation metrics**
+✅ Demonstrates **end-to-end pipeline thinking**
+
+👉 Translation: *You understand the full ML lifecycle, not just modeling.*
+
+---
+
+## 🛠 Tech Stack
+
+| Layer         | Technology                      |
+| ------------- | ------------------------------- |
+| Language      | Python                          |
+| NLP           | NLTK                            |
+| ML            | Scikit-learn, XGBoost, LightGBM |
+| Data          | Pandas, NumPy                   |
+| Visualization | Matplotlib, Seaborn             |
+
+---
+
+## 🚀 Quick Start
+
+```bash id="runnlp1"
 git clone https://github.com/Tanmay1112004/Restaurant-Review-Sentiment-Analysis.git
 cd Restaurant-Review-Sentiment-Analysis
-
-```
-
-### 2. Environment Configuration
-
-It is recommended to use a virtual environment to avoid dependency conflicts.
-
-```bash
-# Create environment
-conda create -n nlp_env python=3.12 -y
-
-# Activate environment
-conda activate nlp_env
-
-```
-
-### 3. Install Dependencies
-
-```bash
 pip install -r requirements.txt
-
 ```
 
 ---
 
-## 📊 Dataset Overview
+## 📂 Dataset
 
-The project utilizes the `Restaurant_Reviews.tsv` dataset, containing:
+* File: `Restaurant_Reviews.tsv`
+* Size: 1,000 labeled reviews
+* Labels:
 
-* **Review**: Raw text feedback from customers.
-* **Liked**: Binary label where `1` = Positive and `0` = Negative.
+  * `1` → Positive
+  * `0` → Negative
 
-> **Note:** While currently optimized for restaurant data, the pipeline architecture is compatible with any binary text classification task, such as Yelp, IMDb, or Amazon product reviews.
+👉 Easily extendable to larger datasets (Yelp, IMDb, Amazon)
+
+---
+
+## 🎯 Real-World Applications
+
+* Customer feedback analysis
+* Brand sentiment monitoring
+* Product review classification
+* Support ticket prioritization
+
+---
+
+## 📈 What This Project Demonstrates
+
+* End-to-end NLP pipeline design
+* Feature engineering strategies
+* Model benchmarking & evaluation
+* Data-driven decision making
+* Scalable text classification systems
+
+---
+
+## 🔮 Future Enhancements
+
+* [ ] Deep learning models (LSTM / BERT)
+* [ ] Real-time sentiment API (FastAPI)
+* [ ] Dashboard integration (Streamlit / Power BI)
+* [ ] Multilingual sentiment analysis
+* [ ] Aspect-based sentiment analysis
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+```bash id="contri_nlp1"
+git checkout -b feature/improvement
+git commit -m "Improved model performance"
+git push origin feature/improvement
+```
 
 ---
+
+## ⭐ Support
+
+If you found this useful:
+
+* ⭐ Star the repo
+* 🍴 Fork it
+* 🚀 Extend it
+
+---
+
+## 👨‍💻 Developer Mindset
+
+**From raw text → structured data → actionable insights**
+
+---
+
+## 🔥 Final Thought
+
+Text is messy.
+
+👉 But the right pipeline turns it into **business intelligence.**
+
+---
+
+<p align="center">
+  🍴 <b>Understand customers. Improve decisions.</b>
+</p>
