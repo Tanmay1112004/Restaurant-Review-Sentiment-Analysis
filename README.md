@@ -40,7 +40,7 @@ The project follows a standard data science lifecycle:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/Restaurant-Review-Sentiment-Analysis.git
+git clone https://github.com/Tanmay1112004/Restaurant-Review-Sentiment-Analysis.git
 cd Restaurant-Review-Sentiment-Analysis
 
 ```
