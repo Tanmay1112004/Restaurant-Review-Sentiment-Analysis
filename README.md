@@ -174,7 +174,7 @@ This project:
 ## 🚀 Quick Start
 
 ```bash id="runnlp1"
-git clone https://github.com//Restaurant-Review-Sentiment-Analysis.git
+git clone https://github.com/Tanmay1112004/Restaurant-Review-Sentiment-Analysis.git
 cd Restaurant-Review-Sentiment-Analysis
 pip install -r requirements.txt
 ```
